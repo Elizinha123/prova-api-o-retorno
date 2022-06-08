@@ -1,6 +1,6 @@
 import { inserirpet, listarPet} from './Repository/petRepository.js';
 
-import { Router} from 'express';
+import { Router } from "express";
 const server = Router();
 
 server.post('/pet' , async (req, resp) => {

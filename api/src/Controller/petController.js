@@ -1,9 +1,9 @@
-import { Router} from "express"
+import { inserirpet, listarPet} from './Repository/petRepository.js';
+
+import { Router} from 'express';
 const server = Router();
-import { inserirpet, consultarpet} from "./Repository/petRepository.js"
 
-
-server.get('/inserirpet' , (req, resp) => {
+server.post('/pet' , async (req, resp) => {
     try{
        const passarinho = req.body;
 
@@ -15,11 +15,21 @@ server.get('/inserirpet' , (req, resp) => {
 
     }catch(err) {
         resp.status(400).send({
-            erro: err.message
+            Erro: err.message
         });
     }
 })
 
-server.post('/')
+server.get('/pet') , async (req, resp) => {
+    try{
+        const petlindinho = await listarPet();
+        resp.send(petlindinho);
+ 
+    } catch(err) {
+        resp.status(404).send({
+            Erro: err.message
+        });
+    }
+}
 
 export default server;

@@ -1,4 +1,4 @@
-import { inserirpet, listarPet} from './Repository/petRepository.js';
+import { inserirpet, listarPet} from '../Repository/petRepository.js';
 
 import { Router } from "express";
 const server = Router();

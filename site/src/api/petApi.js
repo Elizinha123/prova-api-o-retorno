@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-   baseURL: `http://localhost:5000`
+   baseURL: `http://localhost:3000`
 
 })
 
@@ -14,7 +14,7 @@ export async function cadastrarPet(nome) {
 
 
  export async function consultar() {
-    const resposta = await api.get('/pet');
+    const resposta = await api.get(`/pet`);
     return resposta.data;
  }
 

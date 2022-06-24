@@ -1,17 +1,18 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { consultar } from '../../api/petApi'
 import {useState, useEffect} from 'react';
 
 export default function Index() {
     const [pet, SetPet] = useState([]);
-    const navigate = useNavigate();
+
+   
     async function consultar(){
-        const r = await pet();
+        const r = await consultar();
         SetPet(r);
     }
 
     useEffect(() =>  {
-        consultar()
+        consultar();
     }, [])
 
 
@@ -19,22 +20,23 @@ return (
     <main> 
          <div>
     <h1> consultar pet</h1>
-        </div>
+      
     <table>
         <thead> 
-            <tr>
-         <th> id</th>
-         <th>nome</th>
-         </tr>
+           <tr>
+         <th>ID</th>
+         <th>NOME</th>
+           </tr>
         </thead>
         <tbody>
             {pet.map(item =>
             <tr>
-                <td>{Item.id}</td>
+                <td>{item.id}</td>
                 <td>{item.nome}</td>
             </tr> )}
         </tbody>
     </table>
+    </div>
    </main>
     
 )

@@ -7,16 +7,11 @@ export default function Index()  {
      
 
    async function salvarClick(){
-     try{
+     
          const pet = await cadastrarPet(nome);
          alert('pet cadastrado');
         
-     } 
-     catch (err) {
-       alert.error(err.message)
-
-   }
-
+    
 }
 
 
@@ -25,9 +20,11 @@ return(
         <div>
         <h1> Cadastrar pet </h1>
 
-        <button onClick={salvarClick} ></button>
-        <input value= {nome} onChange={e => SetNome(e.target.value) } />
-        <Link to='/home'>voltar</Link>
+       
+        <input type='text' onChange={e => SetNome(e.target.value) } />
+        <button onClick={salvarClick}> CADASTRAR  </button> <br/>
+         < Link to='/'>VOLTAR</Link>
+        
         </div>
     </main>
 )

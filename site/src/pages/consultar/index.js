@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { consultar } from '../../api/petApi'
 import {useState, useEffect} from 'react';
 
@@ -13,7 +13,7 @@ export default function Index() {
 
     useEffect(() =>  {
         consultar();
-    }, [])
+    })
 
 
 return (
@@ -33,7 +33,8 @@ return (
             <tr>
                 <td>{item.id}</td>
                 <td>{item.nome}</td>
-            </tr> )}
+            </tr> 
+            )}
         </tbody>
     </table>
     </div>

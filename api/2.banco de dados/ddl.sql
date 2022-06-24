@@ -1,8 +1,7 @@
-CREATE DATABASE petDB ;
+CREATE DATABASE petDB;
 USE petDB;
 
-CREATE TABLE tb_usuario (
-	id_usuario		int primary key auto_increment,
-    nm_pet      	varchar(100)
-   
+CREATE TABLE PET (
+ID_PET        int primary key auto_increment,
+NM_PET        VARCHAR(50)
 );

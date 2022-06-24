@@ -1,14 +1,8 @@
 USE petDB;
 
-
-INSERT INTO tb_usuario (nm_pet)
-     VALUES ('chicotinha');
-     
-SELECT *
-   FROM tb_usuario
-   WHERE nm_pet = 'chicotinha';
-
+INSERT INTO PET(ID_PET, NM_PET)
+VALUES(1, "chicotinha");
 
 SELECT id_usuario    id,
-       nm_pet        nome
- FROM tb_usuario;
+             nm_pet        nome
+         FROM tb_pet;

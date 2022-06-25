@@ -1,8 +1,8 @@
-import { con } from "./Connection.js"
+import { con } from './Connection.js';
 
 export async function inserirpet(pet) {
     const comando =
-     ` INSERT INTO tb_pet (nm_pet)
+     ` INSERT INTO TB_PET (nm_pet)
             VALUES (?) `
     
     const [resposta] = await con.query(comando, [pet.nome]);
@@ -11,7 +11,7 @@ export async function inserirpet(pet) {
 
 export async function listarPet() {
     const comando = 
-    `SELECT id_usuario    id,
+    `SELECT id_pet   id,
              nm_pet        nome
          FROM tb_pet`
     

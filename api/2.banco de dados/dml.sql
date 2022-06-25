@@ -1,8 +1,8 @@
 USE petDB;
 
-INSERT INTO PET(ID_PET, NM_PET)
+INSERT INTO tb_pet(ID_PET, NM_PET)
 VALUES(1, "chicotinha");
 
-SELECT id_usuario    id,
+SELECT ID_PET    id,
              nm_pet        nome
          FROM tb_pet;

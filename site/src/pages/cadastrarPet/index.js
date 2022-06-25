@@ -22,7 +22,7 @@ return(
 
        
         <input type='text' onChange={e => SetNome(e.target.value) } />
-        <button onClick={salvarClick}> CADASTRAR  </button> <br/>
+        <button onClick={salvarClick}> CADASTRAR  </button>
          < Link to='/'>VOLTAR</Link>
         
         </div>

@@ -14,9 +14,9 @@ root.render(
     <BrowserRouter>
     <Routes>
      <Route path= '/' element= {<Home/>} ></Route>
-     <Route path= '/cadastrarPet' element= {<CadastrarPet/>} ></Route>
-     <Route path= '/consultar' element= {<Consultar/>} ></Route> 
-    </Routes>
+     <Route path= '/cadastrarPet' element= {<CadastrarPet/>} />
+     <Route path= '/consultar' element= {<Consultar/>} />
+   </Routes>
     </BrowserRouter>
    
   </React.StrictMode>

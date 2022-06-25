@@ -13,7 +13,7 @@ export async function cadastrarPet(nome) {
 }
 
 
- export async function consultar() {
+ export async function consultarpet() {
     const resposta = await api.get(`/pet`);
     return resposta.data;
  }

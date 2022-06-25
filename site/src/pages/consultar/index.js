@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { consultar } from '../../api/petApi'
+import { consultarpet } from '../../api/petApi'
 import {useState, useEffect} from 'react';
 
 export default function Index() {
@@ -7,7 +7,7 @@ export default function Index() {
 
    
     async function consultar(){
-        const r = await consultar();
+        const [r] = await consultarpet();
         SetPet(r);
     }
 
@@ -37,6 +37,7 @@ return (
             )}
         </tbody>
     </table>
+    <Link to= '/'>VOLTAR HOME</Link>
     </div>
    </main>
     
